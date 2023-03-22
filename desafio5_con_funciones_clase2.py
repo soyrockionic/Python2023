@@ -1,11 +1,11 @@
 def ingreso_pelis():
-    pelis_harry = {}
+    pelis = {}
     tmp = int(input("Ingrese duracion "))
     while tmp != 0 :
         nombre = input("Ingrese nombre de la pelicula ")
-        pelis_harry[nombre] = tmp
+        pelis[nombre] = tmp
         tmp = int(input("Ingrese duracion "))
-    return pelis_harry
+    return pelis
 
 def promedio(pelis_harry):
     suma = 0
