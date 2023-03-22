@@ -9,12 +9,14 @@ print("*"*30)
 print(pelis_harry)
 
 print("*"*30)
-suma = 0
-for i in pelis_harry :
-    suma = suma + pelis_harry[i]
-print(f"Promedio {suma / len(pelis_harry)}")
+if len(pelis_harry) > 0 :
+    suma = 0
+    for i in pelis_harry :
+        suma = suma + pelis_harry[i]
+    print(f"Promedio {suma / len(pelis_harry)}")
 
 print("*"*30)
-promedio = suma / len(pelis_harry)
-mayor_promedio = [(i,pelis_harry[i]) for i in pelis_harry if pelis_harry [i] > promedio]
-print(mayor_promedio)
+if len(pelis_harry) > 0 :
+    promedio = suma / len(pelis_harry)
+    mayor_promedio = [(i,pelis_harry[i]) for i in pelis_harry if pelis_harry [i] > promedio]
+    print(mayor_promedio)
