@@ -8,7 +8,7 @@ def ingreso_pelis():
     return pelis
 
 def promedio(pelis_harry):
-    0 if len(pelis_harry) == 0 else sum(pelis_harry[i] for i in pelis_harry) / len(pelis_harry)
+    return 0 if len(pelis_harry) == 0 else sum(pelis_harry[i] for i in pelis_harry) / len(pelis_harry)
 
 def mayor_promedio(pelis_harry):
     return [(i,pelis_harry[i]) for i in pelis_harry if pelis_harry [i] > promedio(pelis_harry)]
