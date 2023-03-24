@@ -3,7 +3,7 @@ def ingreso_pelis():
     tmp = int(input("Ingrese duracion "))
     while tmp != 0 :
         nombre = input("Ingrese nombre de la pelicula ")
-        pelis[nombre] = tmp
+        pelis.setdefault(nombre,tmp)
         tmp = int(input("Ingrese duracion "))
     return pelis
 
