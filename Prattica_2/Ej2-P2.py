@@ -50,6 +50,7 @@ palabras = info.lower().split()
 
 frecuencias = Counter(palabras)
 
-palabra_mas_comun = frecuencias.most_common(1)[0][0]
+palabra_mas_comun, frecuencia = frecuencias.most_common(1)[0]
 
-print(palabra_mas_comun)
+print()
+print(f"La palabra mas comun es '{palabra_mas_comun}', que aparece {frecuencia} veces.")
