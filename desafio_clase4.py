@@ -9,9 +9,9 @@ arch = open("pelis.txt", "w")
 pelis = []
 for linea in data:
     if(len(linea[5].split(",")) > 1):
-        dicc = {}
-        for e,p in zip(encabezado,linea):
-            dicc[e] = p
+        #dicc = {}
+        #for e,p in zip(encabezado,linea):
+            #dicc[e] = p
         pelis.append(linea)
 json.dump(pelis, arch, indent=4)
 arch.close()
