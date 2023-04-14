@@ -29,12 +29,12 @@ def promedio_general(est):
 
 def estudiante_con_promedio_mas_alto(est):
     promedios = promedio_de_cada_estudiante(est)
-    estudiante_mayor_prom = max(promedios.items(), key=lambda x: x[1])
-    return estudiante_mayor_prom
+    estudiante_mayor_prom, nota = max(promedios.items(), key=lambda x: x[1])
+    return estudiante_mayor_prom + " con promedio: " + str(nota)
 
 def estudiante_con_nota_mas_baja(est):
-    estudiante_menor_nota = min(est.items(), key=lambda x: min(x[1]))
-    return estudiante_menor_nota
+    estudiante_menor_nota, nota = min(est.items(), key=lambda x: min(x[1]))
+    return estudiante_menor_nota + " con nota: " + str(nota[0])
 
 
 estudiantes = estudiantes_y_sus_notas()
