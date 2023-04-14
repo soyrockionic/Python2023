@@ -16,7 +16,8 @@ notas_2 = [30, 95, 28, 84, 84, 43, 66, 51, 4, 11, 58, 10, 13, 34, 96, 71, 86, 37
 
 def estudiantes_y_sus_notas():
     dicc = {}
-    for n, v1, v2 in zip(nombres.split(","), notas_1, notas_2):
+    names = nombres.replace("'","").replace(" ","").replace("\n","").split(",")
+    for n, v1, v2 in zip(names, notas_1, notas_2):
         dicc[n] = [v1, v2]
     return dicc
     
