@@ -34,12 +34,15 @@ class Recurso:
         return f"{self.__nombre} ({self.__tipo}) - última modificación: {self.__ultima_modificacion}"
 
 # Creamos algunos recursos para el curso de Python
-recurso1 = Recurso("Introducción a Python", "https://example.com/intro-python", "video", "2023-05-05")
+recurso1 = Recurso("Introducción a Python", "https://example.com/intro-python", "video", "2023-05-04")
 recurso2 = Recurso("Ejercicios de Python básico", "https://example.com/ejercicios-python", "jupyter", "2023-05-04")
 recurso3 = Recurso("Guía de estilo de Python", "https://example.com/guia-estilo-python.pdf", "PDF", "2023-05-04")
 
 print('*'*70)
+print(recurso1)
 recurso1.dar_nombre('Introducion a PYSimpleGUI')
+recurso1.agregar_fecha('2023-05-05')
+print('*'*70)
 print(recurso1)
 print('*'*70)
 print(recurso2)
