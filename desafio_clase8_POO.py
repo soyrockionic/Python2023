@@ -1,48 +1,60 @@
+import datetime
+
 class Recurso:
 
-    def __init__(self, nombre, url, tipo, ultima_modificacion):
-        self.__nombre = nombre
-        self.__url = url
-        self.__tipo = tipo
-        self.__ultima_modificacion = ultima_modificacion
+    """
+    Clase que representa un recurso del curso.
+
+    Atributos:
+        nombre (str): El nombre del recurso.
+        url (str): La URL donde se puede encontrar el recurso.
+        tipo (str): El tipo de recurso (ej. video, jupyter, PDF).
+        ultima_modificacion (str): La fecha de la última modificación del recurso (formato AAAA-MM-DD).
+    """
+
+    def __init__(self, nombre, url, tipo):
+        self._nombre = nombre
+        self._url = url
+        self._tipo = tipo
+        self._ultima_modificacion = datetime.date.today()
 
     def dar_nombre(self,nombre):
-        self.__nombre = nombre
+        self._nombre = nombre
 
     def agregar_url(self,url):
-        self.__url = url
+        self._url = url
 
     def agregar_tipo(self,tipo):
-        self.__tipo = tipo
+        self._tipo = tipo
 
     def agregar_fecha(self,fecha):
-        self.__ultima_modificacion = fecha
+        self._ultima_modificacion = fecha
 
-    def get__nombre(self):
-        return self.__nombre
+    def get_nombre(self):
+        return self._nombre
 
-    def get__url(self):
-        return self.__url
+    def get_url(self):
+        return self._url
 
-    def get__tipo(self):
-        return self.__tipo
+    def get_tipo(self):
+        return self._tipo
 
-    def get__ultima_modificacion(self):
-        return self.__ultima_modificacion
+    def get_ultima_modificacion(self):
+        return self._ultima_modificacion
 
     def __str__(self):
-        return f"{self.__nombre} ({self.__tipo}) - última modificación: {self.__ultima_modificacion}"
+        return f"{self._nombre} ({self._tipo}) - última modificación: {self._ultima_modificacion}"
+
 
 # Creamos algunos recursos para el curso de Python
-recurso1 = Recurso("Introducción a Python", "https://example.com/intro-python", "video", "2023-05-04")
-recurso2 = Recurso("Ejercicios de Python básico", "https://example.com/ejercicios-python", "jupyter", "2023-05-04")
-recurso3 = Recurso("Guía de estilo de Python", "https://example.com/guia-estilo-python.pdf", "PDF", "2023-05-04")
+recurso1 = Recurso("Introducción a Python", "https://example.com/intro-python", "video")
+recurso2 = Recurso("Ejercicios de Python básico", "https://example.com/ejercicios-python", "jupyter")
+recurso3 = Recurso("Guía de estilo de Python", "https://example.com/guia-estilo-python.pdf", "PDF")
 
 print('*'*70)
 print(recurso1)
-recurso1.dar_nombre('Introducion a PYSimpleGUI')
-recurso1.agregar_fecha('2023-05-05')
 print('*'*70)
+recurso1.dar_nombre('Introducion a PYSimpleGUI')
 print(recurso1)
 print('*'*70)
 print(recurso2)
