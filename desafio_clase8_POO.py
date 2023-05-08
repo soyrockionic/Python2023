@@ -18,16 +18,16 @@ class Recurso:
         self._tipo = tipo
         self._ultima_modificacion = datetime.date.today()
 
-    def dar_nombre(self,nombre):
+    def set_nombre(self,nombre):
         self._nombre = nombre
 
-    def agregar_url(self,url):
+    def set_url(self,url):
         self._url = url
 
-    def agregar_tipo(self,tipo):
+    def set_tipo(self,tipo):
         self._tipo = tipo
 
-    def agregar_fecha(self,fecha):
+    def set_fecha(self,fecha):
         self._ultima_modificacion = fecha
 
     def get_nombre(self):
@@ -43,7 +43,7 @@ class Recurso:
         return self._ultima_modificacion
 
     def __str__(self):
-        return f"{self._nombre} ({self._tipo}) - última modificación: {self._ultima_modificacion}"
+        return f"{self._nombre} - {self._url} ({self._tipo}) - última modificación: {self._ultima_modificacion}"
 
 
 # Creamos algunos recursos para el curso de Python
@@ -54,7 +54,8 @@ recurso3 = Recurso("Guía de estilo de Python", "https://example.com/guia-estilo
 print('*'*70)
 print(recurso1)
 print('*'*70)
-recurso1.dar_nombre('Introducion a PYSimpleGUI')
+recurso1.set_nombre('Introducion a PYSimpleGUI')
+recurso1.set_url('https://example.com/intro-pysimplegui')
 print(recurso1)
 print('*'*70)
 print(recurso2)
