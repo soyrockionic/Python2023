@@ -3,15 +3,13 @@ import csv
 with open('log_catedras.csv',encoding='utf-8') as arch:
     csv_reader = csv.reader(arch, delimiter=',')
     enc, data = next(csv_reader), list(csv_reader)
-arch.close()
 
 def respondieron_turno_mañana():
     users = []
-    for user in data:
-        if(user[3] == "Cuestionario: Repaso clase 2 - Turno mañana"):
-            if(user[4] == "Ha comenzado el intento"):
-                if(user[6].startswith("163.10")):
-                    users.append(user)
+    
+    users = list(filter(lambda user: user[3] == "Cuestionario: Repaso clase 2 - Turno mañana" and 
+                                     user[4] == "Ha comenzado el intento" and 
+                                     user[6].startswith("163.10"), data))
     return users
 
 r = respondieron_turno_mañana()
