@@ -2,23 +2,29 @@
 
 a)
 
-La funcion mi_funcion puede ser invocada con cualquier numero de parametros. Todos los parametros pasados despues del parametro datos se consideran argumentos opcionales.
+La funcion mi_funcion puede ser invocada con cualquier numero de parametros. Todos los parametros pasados
+despues del parametro datos se consideran argumentos opcionales.
 
-En terminos de cuantos parametros son obligatorios u opcionales, en tu codigo, el parametro datos es el unico parametro obligatorio. Los parametros adicionales despues de datos (por ejemplo, "Hypno", "Butterfree", "Rhyhorn", "Slowpoke" en tu ejemplo) son opcionales.
+En terminos de cuantos parametros son obligatorios u opcionales, en tu codigo, el parametro datos es el unico
+parametro obligatorio. Los parametros adicionales despues de datos (por ejemplo, "Hypno", "Butterfree", "Rhyhorn", "Slowpoke" en tu ejemplo) son opcionales.
 
 En resumen:
 
 El parametro datos es obligatorio y debe ser proporcionado al invocar la funcion.
-Los parametros adicionales (por ejemplo, "Hypno", "Butterfree", "Rhyhorn", "Slowpoke") son opcionales y puedes pasar cualquier numero de ellos a la funcion.
+Los parametros adicionales (por ejemplo, "Hypno", "Butterfree", "Rhyhorn", "Slowpoke") son opcionales y
+puedes pasar cualquier numero de ellos a la funcion.
 
 
 -----------------------------------------------------------------------------------
 b)
 
-La funcion mi_funcion retorna un diccionario que contiene el recuento de apariciones de cada elemento en la lista
-de datos para los elementos pasados como argumentos.
+La funcion mi_funcion retorna un diccionario que contiene el recuento de apariciones de cada elemento
+en la lista de datos para los elementos pasados como argumentos.
 
-Con respecto a los datos contenidos en el archivo "log_completo.csv", la funcion mi_funcion cuenta cuantas veces aparecen los elementos "Hypno", "Butterfree", "Rhyhorn" y "Slowpoke" en la lista de datos extraida del archivo CSV. El resultado impreso (print(resultado)) mostrara un diccionario con las cantidades correspondientes a cada uno de estos elementos encontrados en los datos del archivo de registro.
+Con respecto a los datos contenidos en el archivo "log_completo.csv", la funcion mi_funcion cuenta cuantas veces
+aparecen los elementos "Hypno", "Butterfree", "Rhyhorn" y "Slowpoke" en la lista de datos extraida del archivo CSV.
+El resultado impreso (print(resultado)) mostrara un diccionario con las cantidades correspondientes a cada uno de
+estos elementos encontrados en los datos del archivo de registro.
 
 -----------------------------------------------------------------------------------
 
@@ -26,7 +32,9 @@ c)
 
 La variable reader es un objeto de tipo csv.reader.
 
-Cuando se lee un archivo CSV utilizando csv.reader, el objeto reader actua como un iterador que permite acceder a las filas del archivo CSV una por una. En cada iteracion, reader devuelve una lista que representa una fila del archivo CSV.
+Cuando se lee un archivo CSV utilizando csv.reader, el objeto reader actua como un iterador que permite acceder
+a las filas del archivo CSV una por una. En cada iteracion, reader devuelve una lista que representa una fila del
+archivo CSV.
 
 se usa list(reader) para convertir el objeto reader en una lista de filas.
 
@@ -41,4 +49,5 @@ En resumen, la conversion a lista es necesaria para poder trabajar con los datos
 ------------------------------------------------------------------------------------
 
 2) Imprime un diccionario:
-   Cada clave del diccionario correspondera a uno de los elementos pasados como argumentos a la funcion mi_funcion,     y el valor asociado sera la cantidad de veces que ese elemento aparece en los datos del archivo.
+Cada clave del diccionario correspondera a uno de los elementos pasados como argumentos a la funcion mi_funcion,
+y el valor asociado sera la cantidad de veces que ese elemento aparece en los datos del archivo.
