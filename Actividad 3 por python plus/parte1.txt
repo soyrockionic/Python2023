@@ -41,7 +41,8 @@ se usa list(reader) para convertir el objeto reader en una lista de filas.
 La conversion a lista se realiza para facilitar el acceso a los datos en el codigo posterior. Al convertir el
 objeto reader en una lista, se obtiene una lista de filas que se puede recorrer y manipular facilmente.
 
-En resumen, la conversion a lista es necesaria para poder trabajar con los datos de manera mas conveniente, ya que proporciona una estructura de datos iterable que puede ser utilizada en la funcion mi_funcion.
+En resumen, la conversion a lista es necesaria para poder trabajar con los datos de manera mas conveniente,
+ya que proporciona una estructura de datos iterable que puede ser utilizada en la funcion mi_funcion.
 
 - si sacamos la conversion, el programa no anda porque en la funcion mi_funcion se trabaja el parametro datos
   como una lista
