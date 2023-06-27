@@ -54,14 +54,21 @@ c)
 
 Usar pandas en lugar del manejo tradicional de archivos CSV ofrece varias ventajas. Aqui hay dos de ellas:
 
-1. Funciones y metodos optimizados: pandas ofrece funciones y metodos optimizados para el analisis y manipulacion eficiente de datos tabulares. Permite realizar operaciones complejas como filtrar, ordenar, agrupar, fusionar y transformar datos. Esto simplifica el procesamiento y manipulacion de grandes conjuntos de datos.
+1. Funciones y metodos optimizados: pandas ofrece funciones y metodos optimizados para el analisis y manipulacion
+eficiente de datos tabulares. Permite realizar operaciones complejas como filtrar, ordenar, agrupar, fusionar y
+transformar datos. Esto simplifica el procesamiento y manipulacion de grandes conjuntos de datos.
 
-2. Flexibilidad en el manejo de datos: pandas proporciona DataFrames, una estructura de datos tabular flexible y poderosa. Permite operaciones vectorizadas, consultas avanzadas y seleccion de datos facilmente. Ofrece herramientas para analisis exploratorio y facilita el manejo de datos en comparacion con el manejo tradicional de archivos CSV.
+2. Flexibilidad en el manejo de datos: pandas proporciona DataFrames, una estructura de datos tabular flexible y poderosa. Permite operaciones vectorizadas, consultas avanzadas y seleccion de datos facilmente. Ofrece herramientas
+para analisis exploratorio y facilita el manejo de datos en comparacion con el manejo tradicional de archivos CSV.
 
-En resumen, pandas proporciona una interfaz de alto nivel para trabajar con datos tabulares, lo que simplifica y agiliza las tareas de manipulacion, analisis y procesamiento de datos en comparacion con el manejo tradicional de archivos CSV.
+En resumen, pandas proporciona una interfaz de alto nivel para trabajar con datos tabulares, lo que simplifica y
+agiliza las tareas de manipulacion, analisis y procesamiento de datos en comparacion con el manejo tradicional
+de archivos CSV.
 
 -----------------------------------------------------------------------------------
 
 2)
 
-El codigo carga un archivo CSV, en una funcion filtra los datos por nombres de usuario especificos y cuenta las ocurrencias de cada nombre de usuario filtrado. Luego, crea un DataFrame con los resultados y lo imprime en la salida estandar.
+El codigo carga un archivo CSV, en una funcion filtra los datos por nombres de usuario especificos y cuenta las
+ocurrencias de cada nombre de usuario filtrado. Luego, crea un DataFrame con los resultados y lo imprime en
+la salida estandar.
