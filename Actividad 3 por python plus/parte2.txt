@@ -58,7 +58,8 @@ Usar pandas en lugar del manejo tradicional de archivos CSV ofrece varias ventaj
 eficiente de datos tabulares. Permite realizar operaciones complejas como filtrar, ordenar, agrupar, fusionar y
 transformar datos. Esto simplifica el procesamiento y manipulacion de grandes conjuntos de datos.
 
-2. Flexibilidad en el manejo de datos: pandas proporciona DataFrames, una estructura de datos tabular flexible y poderosa. Permite operaciones vectorizadas, consultas avanzadas y seleccion de datos facilmente. Ofrece herramientas
+2. Flexibilidad en el manejo de datos: pandas proporciona DataFrames, una estructura de datos tabular flexible
+y poderosa. Permite operaciones vectorizadas, consultas avanzadas y seleccion de datos facilmente. Ofrece herramientas
 para analisis exploratorio y facilita el manejo de datos en comparacion con el manejo tradicional de archivos CSV.
 
 En resumen, pandas proporciona una interfaz de alto nivel para trabajar con datos tabulares, lo que simplifica y
