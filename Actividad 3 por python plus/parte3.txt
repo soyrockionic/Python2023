@@ -105,7 +105,8 @@ por el nombre del usuario y obtener el tamaño de cada grupo.
 En términos de resultados, ambos códigos producirán resultados similares, es decir, contar la cantidad de ocurrencias
 de los elementos especificados. Sin embargo, el segundo código utiliza la funcionalidad y la optimización incorporadas
 de pandas, lo que puede resultar en un código más eficiente y más fácil de entender, especialmente cuando se trabaja
-con conjuntos de datos más grandes. Además, el segundo código proporciona el resultado en un formato tabular con un DataFrame, lo que permite realizar más análisis y manipulaciones de datos de manera conveniente.
+con conjuntos de datos más grandes. Además, el segundo código proporciona el resultado en un formato tabular con
+un DataFrame, lo que permite realizar más análisis y manipulaciones de datos de manera conveniente.
 
 Mi opinion:
 
