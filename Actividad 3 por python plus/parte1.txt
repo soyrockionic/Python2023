@@ -6,7 +6,9 @@ La funcion mi_funcion puede ser invocada con cualquier numero de parametros. Tod
 despues del parametro datos se consideran argumentos opcionales.
 
 En terminos de cuantos parametros son obligatorios u opcionales, en tu codigo, el parametro datos es el unico
-parametro obligatorio. Los parametros adicionales despues de datos (por ejemplo, "Hypno", "Butterfree", "Rhyhorn", "Slowpoke" en tu ejemplo) son opcionales.
+parametro obligatorio.
+Los parametros adicionales despues de datos (por ejemplo, "Hypno", "Butterfree", "Rhyhorn", "Slowpoke" en tu ejemplo)
+son opcionales.
 
 En resumen:
 
