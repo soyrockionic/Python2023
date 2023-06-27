@@ -1,0 +1,67 @@
+1)
+
+b)
+
+Usando pandas, podemos obtener informacion sobre un dataset de la siguiente manera:
+
+1)Labels (nombres de las columnas): Podemos obtener los nombres de las columnas del dataset mediante el atributo 'columns'. Por ejemplo:
+
+# Obtener los nombres de las columnas
+labels = df.columns
+print(labels)
+
+Index(['Hora', 'Nombre completo del usuario', 'Usuario afectado',
+       'Contexto del evento', 'Componente', 'Nombre evento', 'Origen',
+       'Direccion IP', 'indice_raro', 'indice_super_raro'],
+      dtype='object')
+
+2)Cantidad de filas y columnas: Podemos obtener la cantidad de filas y columnas del dataset usando el atributo 'shape'.
+El numero de filas se puede obtener accediendo al primer elemento de la tupla devuelta, y el numero de columnas se 
+obtiene accediendo al segundo elemento.
+Por ejemplo:
+
+# Obtener la cantidad de filas y columnas
+filas, columnas = df.shape
+print("Filas:", filas)
+print("Columnas:", columnas)
+
+Filas: 126593
+Columnas: 10
+
+3)Tipos de cada elemento: Podemos obtener los tipos de datos de cada columna del dataset usando el atributo 'dtypes'.
+Esto devuelve un objeto Serie que contiene el tipo de dato de cada columna.
+Por ejemplo:
+
+# Obtener los tipos de datos de cada columna
+tipos = df.dtypes
+print(tipos)
+
+Hora                            object
+Nombre completo del usuario     object
+Usuario afectado                object
+Contexto del evento             object
+Componente                      object
+Nombre evento                   object
+Origen                          object
+Direccion IP                    object
+indice_raro                    float64
+indice_super_raro              float64
+dtype: object
+
+-----------------------------------------------------------------------------------
+
+c)
+
+Usar pandas en lugar del manejo tradicional de archivos CSV ofrece varias ventajas. Aqui hay dos de ellas:
+
+1. Funciones y metodos optimizados: pandas ofrece funciones y metodos optimizados para el analisis y manipulacion eficiente de datos tabulares. Permite realizar operaciones complejas como filtrar, ordenar, agrupar, fusionar y transformar datos. Esto simplifica el procesamiento y manipulacion de grandes conjuntos de datos.
+
+2. Flexibilidad en el manejo de datos: pandas proporciona DataFrames, una estructura de datos tabular flexible y poderosa. Permite operaciones vectorizadas, consultas avanzadas y seleccion de datos facilmente. Ofrece herramientas para analisis exploratorio y facilita el manejo de datos en comparacion con el manejo tradicional de archivos CSV.
+
+En resumen, pandas proporciona una interfaz de alto nivel para trabajar con datos tabulares, lo que simplifica y agiliza las tareas de manipulacion, analisis y procesamiento de datos en comparacion con el manejo tradicional de archivos CSV.
+
+-----------------------------------------------------------------------------------
+
+2)
+
+El codigo carga un archivo CSV, en una funcion filtra los datos por nombres de usuario especificos y cuenta las ocurrencias de cada nombre de usuario filtrado. Luego, crea un DataFrame con los resultados y lo imprime en la salida estandar.

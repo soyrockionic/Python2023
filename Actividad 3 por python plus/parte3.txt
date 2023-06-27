@@ -1,0 +1,98 @@
+1)
+
+a_1)
+
+import csv
+
+archivo_log = "log_completo.csv" 
+
+def mi_funcion(datos, *args):
+    dicci = {}
+    for elem in args:
+        dicci[elem] = len([x for x in datos if x[1]  == elem ])
+    return dicci  
+
+with open(archivo_log, encoding='utf-8') as data_set:
+    reader = csv.reader(data_set, delimiter=',')
+    encabezado_log, datos_log = next(reader), list(reader)
+    
+resultado = mi_funcion(datos_log, "Hypno", "Butterfree", "Rhyhorn", "Slowpoke")
+print(resultado)
+
+
+cumple con PEP 8?
+
+
+Sí, el código que proporcionaste parece cumplir con PEP 8, la guía de estilo oficial para el código Python. Aquí hay algunas pautas de PEP 8 que el código sigue:
+
+1. Las importaciones se colocan al comienzo del archivo.
+2. Las variables a nivel de módulo se nombran con letras minúsculas y guiones bajos.
+3. Los nombres de las funciones están en minúsculas y separados por guiones bajos.
+4. Los nombres de las variables están en minúsculas, separados por guiones bajos y son descriptivos.
+5. La indentación es consistente, utilizando cuatro espacios para cada nivel.
+6. Hay espacios alrededor de los operadores y después de las comas en las llamadas a funciones.
+7. Las líneas no son demasiado largas (dentro de un límite razonable).
+8. Se utilizan comentarios para explicar el código cuando es necesario.
+
+En general, el código muestra una buena adherencia a las pautas de PEP 8.
+
+-------------------------------------------------------------------------------------------------------------
+
+a_2)
+
+import pandas as pd
+
+archivo_log = "log_completo.csv"
+
+def mi_funcion(datos, *args):
+    # Filtro los datos por los argumentos proporcionados
+    filtro = datos['Nombre completo del usuario'].isin(args)
+    # Aplico groupby y obtengo el tamaño de cada grupo
+    groupby_resultado = datos[filtro].groupby('Nombre completo del usuario').size()
+    return groupby_resultado
+
+datos_log = pd.read_csv(archivo_log)
+
+resultado = mi_funcion(datos_log, "Hypno", "Butterfree", "Rhyhorn", "Slowpoke")
+
+# Creo un DataFrame a partir del resultado y renombro la columna con lo recuentos 'Recuento'
+tabla_resultado = pd.DataFrame(resultado, columns=['Recuento']).reset_index()
+
+
+print(tabla_resultado)   cumple con PEP 8 ?
+
+
+Sí, el código que has proporcionado cumple con las directrices de estilo de código PEP 8. Aquí está el análisis:
+
+- Los import statements están al inicio del archivo, cada uno en una línea separada.
+- El nombre del archivo se asigna a la variable `archivo_log` y sigue la convención de nombres en minúsculas con palabras separadas por guiones bajos.
+- La definición de la función `mi_funcion` sigue las convenciones de nombres en minúsculas con palabras separadas por guiones bajos.
+- Los comentarios están correctamente formateados con un espacio después del símbolo de número (#).
+- Las líneas de código tienen una longitud adecuada y no exceden los 79 caracteres recomendados.
+- Las operaciones dentro de la función `mi_funcion` están correctamente indentadas.
+- Los nombres de las variables `filtro`, `groupby_resultado`, `datos_log` y `tabla_resultado` siguen la convención de nombres en minúsculas con palabras separadas por guiones bajos.
+- El código está bien estructurado y fácil de leer.
+
+En general, el código cumple con las pautas de estilo de código PEP 8 y se ve limpio y legible.
+
+-------------------------------------------------------------------------------------------------------------
+
+b)
+
+ambos codigos producen lo mismo?
+
+Respuesta de chatgpt:
+
+Ambos códigos tienen un propósito similar, que es contar la cantidad de ocurrencias de ciertos elementos en un dataset. Sin embargo, existen algunas diferencias significativas entre los dos códigos:
+
+1. Método de lectura de datos: El primer código utiliza el módulo `csv` de Python para leer el archivo CSV y obtener los datos en una lista de listas. El segundo código utiliza la biblioteca pandas para leer directamente el archivo CSV y cargar los datos en un DataFrame.
+
+2. Estructura de datos utilizada: En el primer código, los datos se almacenan como una lista de listas, donde cada lista representa una fila del dataset. En el segundo código, los datos se almacenan en un DataFrame de pandas, que es una estructura tabular bidimensional.
+
+3. Enfoque de conteo: En el primer código, se utiliza una comprensión de lista para filtrar y contar las ocurrencias de los elementos especificados. En el segundo código, se utiliza el método `groupby` de pandas para agrupar los datos por el nombre del usuario y obtener el tamaño de cada grupo.
+
+En términos de resultados, ambos códigos producirán resultados similares, es decir, contar la cantidad de ocurrencias de los elementos especificados. Sin embargo, el segundo código utiliza la funcionalidad y la optimización incorporadas de pandas, lo que puede resultar en un código más eficiente y más fácil de entender, especialmente cuando se trabaja con conjuntos de datos más grandes. Además, el segundo código proporciona el resultado en un formato tabular con un DataFrame, lo que permite realizar más análisis y manipulaciones de datos de manera conveniente.
+
+Mi opinion:
+
+Estoy de acuerdo que con lo dice la IA , porque es lo que hacen los codigos, aunque lo impriman de diferente manera.
